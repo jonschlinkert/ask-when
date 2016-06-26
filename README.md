@@ -1,4 +1,4 @@
-# ask-when [![NPM version](https://img.shields.io/npm/v/ask-when.svg?style=flat)](https://www.npmjs.com/package/ask-when) [![NPM downloads](https://img.shields.io/npm/dm/ask-when.svg?style=flat)](https://npmjs.org/package/ask-when) [![Build Status](https://img.shields.io/travis/jonschlinkert/ask-when.svg?style=flat)](https://travis-ci.org/jonschlinkert/ask-when)
+# ask-when [![NPM version](https://img.shields.io/npm/v/ask-when.svg?style=flat)](https://www.npmjs.com/package/ask-when) [![NPM downloads](https://img.shields.io/npm/dm/ask-when.svg?style=flat)](https://npmjs.org/package/ask-when)
 
 Conditionally prompt the user based on options. For use with Base applications or question-store.
 
