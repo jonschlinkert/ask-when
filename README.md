@@ -17,8 +17,10 @@ Can be used with any of the following libs:
 * [question-cache](https://github.com/jonschlinkert/question-cache)
 * [question-store](https://github.com/jonschlinkert/question-store)
 * [base](https://github.com/node-base/base), when the [base-questions](https://github.com/node-base/base-questions) plugin is used
-* [verb](https://github.com/verbose/verb), in your `verbfile.js`
+* [assemble](https://github.com/assemble/assemble), in your `assemblefile.js`
 * [generate](https://github.com/generate/generate), in your `generator.js`
+* [update](https://github.com/update/update), in your `updatefile.js`
+* [verb](https://github.com/verbose/verb), in your `verbfile.js`
 
 ## API
 

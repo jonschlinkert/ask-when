@@ -59,11 +59,13 @@
       ]
     },
     "reflinks": [
+      "assemble",
       "base",
       "base-questions",
       "generate",
       "question-cache",
       "question-store",
+      "update",
       "verb",
       "verb-readme-generator"
     ],
