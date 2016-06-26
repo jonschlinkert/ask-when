@@ -1,7 +1,7 @@
 {
   "name": "ask-when",
   "description": "Conditionally prompt the user based on options. For use with Base applications or question-store.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/ask-when",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/ask-when",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "extend-shallow": "^2.0.1",
+    "get-value": "^2.0.6",
     "is-answer": "^0.1.0",
     "is-valid-app": "^0.1.2"
   },
