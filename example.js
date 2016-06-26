@@ -17,7 +17,7 @@ app.options.askWhen = 'not-answered';
 //   });
 
 app.question('dest', 'Destination directory?', {default: process.cwd()})
-askWhen.askWhen(app, 'dest', function(err, answers) {
+require('./').when(app, 'dest', function(err, answers) {
   if (err) return console.log(err);
   console.log(answers)
 });

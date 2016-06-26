@@ -3,6 +3,7 @@
 var extend = require('extend-shallow');
 var isValid = require('is-valid-app');
 var isAnswer = require('is-answer');
+var get = require('get-value');
 
 function askWhen(app, name, options, cb) {
   if (typeof options === 'function') {
@@ -10,8 +11,12 @@ function askWhen(app, name, options, cb) {
     options = {};
   }
 
+  if (typeof cb !== 'function') {
+    throw new TypeError('expected a callback function');
+  }
+
   var opts = extend({save: false}, app.options, options);
-  var val = opts[name];
+  var val = get(opts, name);
 
   var answers = {};
   answers[name] = val;
