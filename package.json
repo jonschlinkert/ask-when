@@ -10,7 +10,9 @@
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "LICENSE",
+    "README.md"
   ],
   "main": "index.js",
   "engines": {
@@ -23,13 +25,12 @@
     "extend-shallow": "^2.0.1",
     "get-value": "^2.0.6",
     "is-answer": "^0.1.0",
-    "is-valid-app": "^0.1.2"
+    "is-valid-app": "^0.2.0"
   },
   "devDependencies": {
     "base": "^0.11.1",
     "base-questions": "^0.6.6",
-    "gulp-format-md": "*",
-    "mocha": "*"
+    "gulp-format-md": "^0.1.9"
   },
   "keywords": [
     "ask",
@@ -68,7 +69,7 @@
       "question-store",
       "update",
       "verb",
-      "verb-readme-generator"
+      "verb-generate-readme"
     ],
     "lint": {
       "reflinks": true
