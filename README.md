@@ -118,7 +118,9 @@ ask.when(app, 'dest', function(err, answers) {
 
 ### Related projects
 
-related-list
+* [base-questions](https://www.npmjs.com/package/base-questions): Plugin for base-methods that adds methods for prompting the user and storing the answers on… [more](https://github.com/node-base/base-questions) | [homepage](https://github.com/node-base/base-questions "Plugin for base-methods that adds methods for prompting the user and storing the answers on a project-by-project basis.")
+* [question-cache](https://www.npmjs.com/package/question-cache): A wrapper around inquirer that makes it easy to create and selectively reuse questions. | [homepage](https://github.com/jonschlinkert/question-cache "A wrapper around inquirer that makes it easy to create and selectively reuse questions.")
+* [question-store](https://www.npmjs.com/package/question-store): Ask questions, persist the answers. Basic support for i18n and storing answers based on current… [more](https://github.com/jonschlinkert/question-store) | [homepage](https://github.com/jonschlinkert/question-store "Ask questions, persist the answers. Basic support for i18n and storing answers based on current working directory.")
 
 ### Contributing
 
