@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "base": "^0.11.1",
-    "base-questions": "^0.6.6",
+    "base-questions": "^0.7.1",
     "gulp-format-md": "^0.1.9"
   },
   "keywords": [
