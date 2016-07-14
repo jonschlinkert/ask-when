@@ -16,30 +16,21 @@ function askWhen(app, name, options, cb) {
   }
 
   var opts = extend({save: false}, app.options, options);
-  var val = get(opts, name);
+  var val = get(opts, name) || get(opts.data, name);
   var answers = {};
   answers[name] = val;
 
-  var question;
   var isAnswered = isAnswer(val);
   opts.force = isAnswered !== true;
 
   // conditionally prompt the user
   switch (opts.askWhen) {
     case 'never':
-      question = app.questions.get(name);
-      question.options.askWhen = 'never';
-      app.emit('ask', val, name, question, answers);
-      app.emit('answer', val, name, question, answers);
       cb(null, answers);
       return;
 
     case 'not-answered':
       if (isAnswered) {
-        question = app.questions.get(name);
-        question.options.askWhen = 'not-answered';
-        app.emit('ask', val, name, question, answers);
-        app.emit('answer', val, name, question, answers);
         cb(null, answers);
         return;
       }
