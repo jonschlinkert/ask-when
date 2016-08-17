@@ -20,7 +20,7 @@ function askWhen(app, name, options, cb) {
 
   var opts = merge({save: false}, app.base.options, app.options, options);
   var skip = get(opts, ['question.skip', name].join('.'));
-  var data = merge({}, app.cache.data, opts.data, app.cache.answers);
+  var data = merge({}, app.cache.data, opts.data, app.base.cache.answers);
   var val = get(data, name) || get(opts, name);
 
   var answers = {};
