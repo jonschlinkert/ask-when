@@ -5,6 +5,7 @@ var merge = require('mixin-deep');
 var isValid = require('is-valid-app');
 var isAnswer = require('is-answer');
 var get = require('get-value');
+var names = [];
 
 function askWhen(app, name, options, cb) {
   debug('initializing from <%s>', __filename);
@@ -20,7 +21,7 @@ function askWhen(app, name, options, cb) {
 
   var opts = merge({save: false}, app.base.options, app.options, options);
   var skip = get(opts, ['question.skip', name].join('.'));
-  var data = merge({}, app.cache.data, opts.data, app.base.cache.answers);
+  var data = merge({}, app.base.cache.data, opts.data, app.base.cache.answers);
   var val = get(data, name) || get(opts, name);
 
   var answers = {};
@@ -29,7 +30,7 @@ function askWhen(app, name, options, cb) {
   var isAnswered = isAnswer(val);
   opts.force = isAnswered !== true;
 
-  if (isAnswered || skip === true) {
+  if (isSkipped(app, names, skip, isAnswered)) {
     opts.askWhen = 'not-answered';
     opts.force = false;
   }
@@ -71,5 +72,20 @@ module.exports = function(options) {
     }
   };
 };
+
+function isSkipped(app, names, skip, isAnswered) {
+  if (names.indexOf(app.namespace) === -1) {
+    names.push(app.namespace);
+  }
+
+  if (skip === true && names.length > 1) {
+    return true;
+  }
+
+  if ((app.options.askWhen === 'not-answered' || names.length > 1) && isAnswered) {
+    return true;
+  }
+  return false;
+}
 
 module.exports.when = askWhen;
